@@ -1,6 +1,6 @@
 # Numerical Methods in C++
 
-This repository contains a collection of C++ programs implementing various numerical methods, developed as part of my 4th-year academic coursework at the University of Rajshahi. These programs solve problems in curve fitting, root finding, ordinary differential equations (ODEs), numerical integration, linear systems, interpolation, and partial differential equations (PDEs).
+This repository contains a collection of C++ programs implementing various numerical methods, developed as part of my 4th-year academic coursework at the University of Rajshahi. These programs solve problems in curve fitting, root finding, ordinary differential equations (ODEs), numerical integration, linear systems, interpolation, and partial differential equations (PDEs) mainly Heat equation and wave equation.
 
 ## About
  This project showcases my skills in C++ and numerical computing, applied to real-world mathematical problems. Each program is designed to be user-friendly, with input prompts and clear output formatting.
@@ -57,5 +57,5 @@ y = 1.000000 + 0.500000x + 0.500000x^2 + 0.166667x^3
 - Enhance documentation with mathematical explanations.
 
 ## About Me
-I’m an Applied Mathematics student at the University of Rajshahi, with interests in mathematical biology (Perticularly Epidemiology), data science, and automation. Connect with me on LinkedIn: www.linkedin.com/in/soumitro-kumar-das or email me at sdasshuvro@gmail.com.
+I’m an Applied Mathematics student at the University of Rajshahi, with interests in Mathematical Biology (Perticularly Epidemiology), Data Science, and AI Automation. Connect with me on LinkedIn: www.linkedin.com/in/soumitro-kumar-das or email me at sdasshuvro@gmail.com.
 
