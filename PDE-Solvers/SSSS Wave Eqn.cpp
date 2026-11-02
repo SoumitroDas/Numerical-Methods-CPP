@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    cout.precision(3);
+    cout.precision(4);
     cout.setf(ios::fixed);
     double c, xi, ui, xf, uf, ut, tf, h, k, alpha, l;
     int i,j;
@@ -19,7 +19,7 @@ int main()
     cin >> xf >> uf;
     cout << "Enter final simulation time: "<<endl;
     cin >> tf;
-    cout<<"Enter the du/dx at t=0:"<<endl;
+    cout<<"Enter the du/dt at t=0:"<<endl;
     cin>>ut;
     cout <<"Enter value of step size h and k "<<endl;
    
@@ -31,10 +31,10 @@ int main()
      //   k=h/c;
         alpha = c * (k / h);
        l=pow(alpha,2);//lemda=l
-        if (alpha >= 1) {
-            cout << "Please enter new values of h and k such that alpha < 1 (alpha = c * (k / h)): ";
+        if (alpha > 1) {
+            cout << "Please enter new values of h and k such that alpha <= 1 (alpha = c * (k / h)): ";
         }
-    }while (alpha >= 1);
+    }while (alpha > 1);
 
   //  int m = static_cast<int>((xf - xi) / h);
    // int n = static_cast<int>((tf) / k);
@@ -82,7 +82,7 @@ int main()
             double x_choice, t_choice;
             cout << "Enter specific x and t values: ";
             cin >> x_choice >> t_choice;
-            xp=x_choice*m/(xf-xi);
+            xp = (x_choice - xi) * m / (xf - xi);
             tp=t_choice*n/tf;
             cout << "u(" << x_choice << "," << t_choice << ") = " << u[tp][xp] << endl; //u(x,t) vs u(t,x)
     }

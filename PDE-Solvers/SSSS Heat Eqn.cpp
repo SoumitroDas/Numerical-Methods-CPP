@@ -12,7 +12,7 @@ int main()
 
 {
 
-    cout.precision(3);
+    cout.precision(4);
 
     cout.setf(ios::fixed);
 
@@ -69,11 +69,11 @@ int main()
 //   cout<<" l="<<l<<endl;
  //   int m = static_cast<int>((xf - xi) / h);
 
-//    int n = static_cast<int>((tf) / k);
+      int n = static_cast<int>(round(tf / k));
 
    // int m = ((xf - xi) / h);
 
-    int n = ((tf) / k) +1 ;
+   // int n = ((tf) / k) +1 ;
 
     cout<<"Spacial subdivision m="<<m<<"\nTimal Subdivision n="<<n<<endl<<"Corresponding h= "<<h<<"\n and \nk="<<k;
 
@@ -141,9 +141,8 @@ int main()
 
             cin >> x_choice >> t_choice;
 
-            xp=x_choice*m;
-
-            tp=t_choice*n;
+            xp = static_cast<int>(round((x_choice - xi) / h));
+            tp = static_cast<int>(round(t_choice / k));
 
             cout << "u(" << x_choice << "," << t_choice << ") = " << u[tp][xp] << endl; //u(x,t) vs u(t,x)
 
@@ -161,7 +160,7 @@ int main()
 
             cin >> x_specific;
 
-            xs=x_specific*m;
+            xs = static_cast<int>(round((x_specific - xi) * m / (xf - xi)));
 
             for (int i = 0; i <= n; i++) {
 
@@ -185,7 +184,7 @@ int main()
 
             cin >> t_specific;
 
-            ts=t_specific*n/tf;
+            ts = static_cast<int>(round(t_specific / k));
 
             for (int j = 0; j <= m; j++) {
 
